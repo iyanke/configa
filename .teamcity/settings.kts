@@ -22,7 +22,7 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 'Debug' option is available in the context menu for the task.
 */
 
-version = "2020.2"
+version = "2021.1"
 
 project {
 
@@ -37,13 +37,16 @@ object Configa3 : BuildType({
 })
 
 object Templa2 : Template({
-    name = "Templa2_r"
+    name = "Templa2_ra"
 
     steps {
         step {
             id = "RUNNER_3"
             type = "Configa"
-            param("password", "zxx192f478978efc1c54469c7c25073dd9f")
+            executionMode = BuildStep.ExecutionMode.DEFAULT
+            param("password", "credentialsJSON:ed54f382-1bfd-43e4-a871-caa5a2cd3a20")
+            param("hidden", "hidden123")
+            param("hidden_password", "credentialsJSON:7d9969e2-de9f-4deb-af8d-ef6b5cdf6981")
         }
     }
 })

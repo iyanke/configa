@@ -37,7 +37,7 @@ object Configa3 : BuildType({
 })
 
 object Templa2 : Template({
-    name = "Templa2"
+    name = "Templa2_r"
 
     steps {
         step {
